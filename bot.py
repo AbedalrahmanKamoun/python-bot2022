@@ -34,7 +34,7 @@ def main():
         listen = '127.0.0.1',
         port = 80,
         url_path = TOKEN,
-        webhook_url = 'https://ancient-inlet-94912.herokuapp.com/' + TOKEN
+        webhook_url = 'https://telegram-bot2022.herokuapp.com/' + TOKEN
     )
     updater.idle()
 
