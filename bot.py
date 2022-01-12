@@ -4,8 +4,7 @@ import os
 
 print('Starting Boot...')
 
-# TOKEN = '5013549755:AAFmwuoti0k1BkoaWgnFx07xJLm64yeZj4E'
-TOKEN = os.environ["TOKEN"]
+TOKEN = '5013549755:AAFmwuoti0k1BkoaWgnFx07xJLm64yeZj4E'
 group_chat_id = '-665561748'
 PORT = int(os.environ.get('PORT', 80))
 
@@ -31,12 +30,11 @@ def main():
     disp.add_handler(MessageHandler(Filters.text, send_message))
 
     updater.start_webhook(
-        listen = '127.0.0.1',
+        listen = '0.0.0.0',
         port = 80,
         url_path = TOKEN,
         webhook_url = 'https://telegram-bot2022.herokuapp.com/' + TOKEN
     )
     updater.idle()
 
-if __name__ == '__main__':
-    main()
+main()
