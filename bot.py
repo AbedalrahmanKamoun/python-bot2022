@@ -31,7 +31,7 @@ def main():
 
     updater.start_webhook(
         listen = '0.0.0.0',
-        port = 80,
+        port = int(PORT),
         url_path = TOKEN,
         webhook_url = 'https://telegram-bot2022.herokuapp.com/' + TOKEN
     )
